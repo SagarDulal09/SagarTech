@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sagar Dulal - Digital Blog</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Blog Page Specific Styling */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      margin-top: 40px;
+    }
+
+    .blog-post {
+      background-color: var(--secondary-bg);
+      padding: 25px;
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+      text-align: left;
+    }
+
+    .blog-post:hover {
+      transform: translateY(-5px);
+      border-color: var(--primary-color);
+    }
+
+    .post-meta {
+      font-size: 0.9rem;
+      opacity: 0.7;
+      margin-bottom: 10px;
+    }
+
+    .post-meta i {
+      margin-right: 5px;
+      color: var(--accent-color);
+    }
+
+    .blog-post h3 {
+      font-size: 1.6rem;
+      color: var(--primary-color);
+      margin-bottom: 15px;
+    }
+
+    .read-more {
+      display: inline-block;
+      margin-top: 15px;
+      font-weight: 700;
+      color: var(--primary-color);
+    }
+
+    .read-more:hover {
+      color: var(--accent-color);
+    }
+
+    /* Responsive Layout */
+    @media (max-width: 768px) {
+      .blog-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body class="dark-mode">
+  <header>
+    <nav>
+      <div class="logo">Sagar <span>Tech</span></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="resume.html">Resume</a></li>
+      </ul>
+      <button id="theme-toggle" aria-label="Toggle dark and light theme">
+        <i class="fas fa-sun"></i> </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="blog-section">
+      <div class="container" style="text-align: center;">
+        <h2 class="section-heading">My Digital Thoughts & Insights</h2>
+        <p style="font-size: 1.2rem; margin-top: 25px; opacity: 0.8;">
+          Articles on web trends, design philosophy, and productivity hacks.
+        </p>
+
+        <div class="blog-grid">
+
+          <div class="blog-post">
+            <div class="post-meta">
+              <i class="fas fa-calendar-alt"></i> June 15, 2025 | <i class="fas fa-tag"></i> Web Dev
+            </div>
+            <h3>Mastering Mobile-First CSS</h3>
+            <p>Why designing for smaller screens first leads to better performance and a smoother user experience across
+              all devices.</p>
+            <a href="#" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <div class="blog-post">
+            <div class="post-meta">
+              <i class="fas fa-calendar-alt"></i> May 28, 2025 | <i class="fas fa-tag"></i> Design
+            </div>
+            <h3>The Power of Minimalism in Logo Design</h3>
+            <p>Analyzing how subtle shapes and powerful typography can create an unforgettable brand identity.</p>
+            <a href="#" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <div class="blog-post">
+            <div class="post-meta">
+              <i class="fas fa-calendar-alt"></i> May 10, 2025 | <i class="fas fa-tag"></i> Productivity
+            </div>
+            <h3>5 Filmora Hacks for Faster Video Production</h3>
+            <p>Simple tips and tricks I use to cut down on editing time while maintaining high quality in digital media
+              projects.</p>
+            <a href="#" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <div class="blog-post">
+            <div class="post-meta">
+              <i class="fas fa-calendar-alt"></i> April 20, 2025 | <i class="fas fa-tag"></i> Tech
+            </div>
+            <h3>Getting Started with Git & GitHub for Beginners</h3>
+            <p>An essential guide to version control for anyone serious about web development and collaboration.</p>
+            <a href="#" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; <span id="current-year"></span> Sagar Dulal | Sagar Tech Portfolio | Code, Design, Deploy.
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggleButton = document.getElementById('theme-toggle');
+      const body = document.body;
+      const currentYearSpan = document.getElementById('current-year');
+
+      currentYearSpan.textContent = new Date().getFullYear();
+
+      const savedTheme = localStorage.getItem('theme') || 'dark-mode';
+      body.className = savedTheme;
+      updateToggleIcon(savedTheme);
+
+      toggleButton.addEventListener('click', () => {
+        const newTheme = body.classList.contains('light-mode') ? 'dark-mode' : 'light-mode';
+        body.className = newTheme;
+        localStorage.setItem('theme', newTheme);
+        updateToggleIcon(newTheme);
+      });
+
+      function updateToggleIcon(theme) {
+        const icon = toggleButton.querySelector('i');
+        icon.className = (theme === 'dark-mode') ? 'fas fa-sun' : 'fas fa-moon';
+      }
+    });
+  </script>
+</body>
+
+</html>

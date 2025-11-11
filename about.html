@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Sagar Dulal - Digital Architect</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Contact Page Specific Styling for consistency */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      /* 1/3 for sidebar/profile, 2/3 for content */
+      gap: 40px;
+      align-items: start;
+      text-align: left;
+    }
+
+    .profile-summary {
+      background-color: var(--card-bg);
+      padding: 30px;
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .profile-summary h3 {
+      color: var(--primary-color);
+      margin-top: 15px;
+      margin-bottom: 5px;
+      font-size: 1.5rem;
+    }
+
+    .profile-summary p {
+      font-size: 1.1rem;
+      opacity: 0.8;
+    }
+
+    .profile-photo-about {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin: 0 auto 20px;
+      border: 4px solid var(--accent-color);
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(163, 0, 255, 0.4);
+    }
+
+    .profile-photo-about img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .values-list {
+      list-style: none;
+      margin-top: 20px;
+      padding: 0;
+      text-align: left;
+    }
+
+    .values-list li {
+      padding: 10px 0;
+      border-bottom: 1px dashed var(--border-color);
+      font-weight: 600;
+      color: var(--primary-color);
+    }
+
+    .values-list li:last-child {
+      border-bottom: none;
+    }
+
+    .values-list i {
+      margin-right: 10px;
+      color: var(--accent-color);
+    }
+
+    .bio-content h3 {
+      font-size: 2rem;
+      color: var(--primary-color);
+      margin-bottom: 15px;
+      padding-top: 15px;
+    }
+
+    .bio-content p {
+      margin-bottom: 20px;
+      font-size: 1.15rem;
+      line-height: 1.8;
+    }
+
+    .bio-content ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .bio-content ul li {
+      background: var(--secondary-bg);
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      border-left: 5px solid var(--accent-color);
+      font-weight: bold;
+    }
+
+    @media (max-width: 992px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .profile-summary {
+        order: -1;
+      }
+    }
+  </style>
+</head>
+
+<body class="dark-mode">
+  <header>
+    <nav>
+      <div class="logo">Sagar <span>Tech</span></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="resume.html">Resume</a></li>
+      </ul>
+      <button id="theme-toggle" aria-label="Toggle dark and light theme">
+        <i class="fas fa-sun"></i> </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="about-section">
+      <div class="container" style="text-align: center; margin-bottom: 50px;">
+        <h2 class="section-heading">The Core of Sagar Dulal</h2>
+        <p style="font-size: 1.2rem; margin-top: 25px; opacity: 0.8;">
+          I am Sagar Dulal, a digital architect specializing in high-impact solutions. I bridge the gap between
+          aesthetics and function, ensuring every project is visually arresting and flawlessly engineered.
+        </p>
+      </div>
+
+      <div class="container">
+        <div class="about-grid">
+
+          <div class="profile-summary">
+            <div class="profile-photo-about">
+              <img src="images/sagar.png" alt="Sagar Dulal - Profile Image">
+            </div>
+            <h3>Sagar Dulal</h3>
+            <p>Web Developer & Graphic Designer</p>
+            <p style="font-style: italic; opacity: 0.7;">2+ Years of Professional Experience</p>
+
+            <h3 style="margin-top: 30px;">Core Values</h3>
+            <ul class="values-list">
+              <li><i class="fas fa-lightbulb"></i> Innovation</li>
+              <li><i class="fas fa-magic"></i> Creativity</li>
+              <li><i class="fas fa-handshake"></i> Client Satisfaction</li>
+              <li><i class="fas fa-graduation-cap"></i> Continuous Learning</li>
+            </ul>
+          </div>
+
+          <div class="bio-content">
+            <h3>My Journey: Code Meets Canvas</h3>
+            <p>
+              With over two years dedicated to the digital realm, my work is defined by a unique synthesis of
+              engineering logic and artistic vision. I started my journey mastering front-end development (HTML, CSS,
+              JavaScript) to build robust, interactive websites. Simultaneously, my passion for graphic design (Adobe
+              Photoshop, Canva) allows me to craft compelling brand identities and user interfaces that truly stand out
+              in a crowded market.
+            </p>
+
+            <h3>The Adaptability Advantage</h3>
+            <p>
+              In the rapidly evolving world of technology, static skillsets are a liability. My greatest soft skill is
+              <strong>Adaptability</strong>. I thrive on challenges, seamlessly pivoting between development frameworks,
+              design software, and client communication styles to meet the specific demands of each project. This
+              ensures efficient delivery and results that are current, future-proof, and always exceeding expectations.
+            </p>
+
+            <h3>Key Technical Proficiencies</h3>
+            <ul>
+              <li><i class="fas fa-terminal"></i> <strong>Web Development:</strong> Responsive layouts, vanilla JS
+                functionality, clean semantic HTML5.</li>
+              <li><i class="fas fa-pencil-ruler"></i> <strong>Creative Design:</strong> Branding, logo design, image
+                manipulation, and vector graphics creation.</li>
+              <li><i class="fas fa-cog"></i> <strong>Office & Workflow:</strong> Proficient use of MS Office Suite and
+                Filmora for professional productivity and content creation.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; <span id="current-year"></span> Sagar Dulal | Sagar Tech Portfolio | Designed with Precision. Developed with
+    Passion.
+  </footer>
+
+  <script>
+    // Re-use the theme toggle script from index.html
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggleButton = document.getElementById('theme-toggle');
+      const body = document.body;
+      const currentYearSpan = document.getElementById('current-year');
+
+      currentYearSpan.textContent = new Date().getFullYear();
+
+      // Theme persistence logic
+      const savedTheme = localStorage.getItem('theme') || 'dark-mode';
+      body.className = savedTheme;
+      updateToggleIcon(savedTheme);
+
+      toggleButton.addEventListener('click', () => {
+        const newTheme = body.classList.contains('light-mode') ? 'dark-mode' : 'light-mode';
+        body.className = newTheme;
+        localStorage.setItem('theme', newTheme);
+        updateToggleIcon(newTheme);
+      });
+
+      function updateToggleIcon(theme) {
+        const icon = toggleButton.querySelector('i');
+        if (theme === 'dark-mode') {
+          icon.className = 'fas fa-sun';
+        } else {
+          icon.className = 'fas fa-moon';
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>

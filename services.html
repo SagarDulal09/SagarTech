@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sagar Dulal - Digital Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Services Page Specific Styling */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .service-card {
+            background-color: var(--secondary-bg);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            text-align: left;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary-color);
+        }
+
+        .service-card i {
+            font-size: 3rem;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .service-card ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 15px;
+        }
+
+        .service-card ul li {
+            margin-bottom: 8px;
+            padding-left: 1.2em;
+            text-indent: -1.2em;
+            font-size: 1.05rem;
+        }
+
+        .service-card ul li::before {
+            content: '✓';
+            color: var(--primary-color);
+            font-weight: bold;
+            display: inline-block;
+            width: 1.2em;
+        }
+
+        /* Call to action pricing link */
+        .pricing-cta {
+            display: inline-block;
+            margin-top: 25px;
+            font-weight: 700;
+            color: var(--accent-color);
+        }
+
+        .pricing-cta:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body class="dark-mode">
+    <header>
+        <nav>
+            <div class="logo">Sagar <span>Tech</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="resume.html">Resume</a></li>
+            </ul>
+            <button id="theme-toggle" aria-label="Toggle dark and light theme">
+                <i class="fas fa-sun"></i> </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="services-section">
+            <div class="container" style="text-align: center;">
+                <h2 class="section-heading">My Digital Service Offerings</h2>
+                <p style="font-size: 1.2rem; margin-top: 25px; opacity: 0.8;">
+                    Combining technical expertise with creative flair to deliver complete digital solutions.
+                </p>
+
+                <div class="services-grid">
+
+                    <div class="service-card">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>Front-End Web Development</h3>
+                        <p>Building fast, user-friendly, and fully responsive websites from concept to deployment using
+                            modern web standards.</p>
+                        <ul>
+                            <li>Custom HTML5 & CSS3 Coding</li>
+                            <li>Vanilla JavaScript Functionality</li>
+                            <li>Mobile-First Responsive Design</li>
+                            <li>Performance Optimization</li>
+                        </ul>
+                        <a href="contact.html" class="pricing-cta">Get a Web Quote <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="service-card">
+                        <i class="fas fa-palette"></i>
+                        <h3>Graphic Design & Branding</h3>
+                        <p>Creating compelling visual identities, high-quality media assets, and marketing collateral
+                            that resonate with your audience.</p>
+                        <ul>
+                            <li>Logo & Corporate Identity Design</li>
+                            <li>Adobe Photoshop Image Editing</li>
+                            <li>Canva Social Media Templates</li>
+                            <li>UI/UX Mockups & Wireframing</li>
+                        </ul>
+                        <a href="contact.html" class="pricing-cta">View Design Packages <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="service-card">
+                        <i class="fas fa-video"></i>
+                        <h3>Digital Media & Productivity</h3>
+                        <p>Enhancing your content strategy with dynamic video editing and standardizing your
+                            professional communication tools.</p>
+                        <ul>
+                            <li>Filmora Video Editing (Promos, Vlogs)</li>
+                            <li>MS Office Template Creation (Reports)</li>
+                            <li>Basic Computer Skills Training</li>
+                            <li>Digital Asset Management</li>
+                        </ul>
+                        <a href="contact.html" class="pricing-cta">Inquire About Media <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        &copy; <span id="current-year"></span> Sagar Dulal | Sagar Tech Portfolio | Code, Design, Deploy.
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleButton = document.getElementById('theme-toggle');
+            const body = document.body;
+            const currentYearSpan = document.getElementById('current-year');
+
+            currentYearSpan.textContent = new Date().getFullYear();
+
+            const savedTheme = localStorage.getItem('theme') || 'dark-mode';
+            body.className = savedTheme;
+            updateToggleIcon(savedTheme);
+
+            toggleButton.addEventListener('click', () => {
+                const newTheme = body.classList.contains('light-mode') ? 'dark-mode' : 'light-mode';
+                body.className = newTheme;
+                localStorage.setItem('theme', newTheme);
+                updateToggleIcon(newTheme);
+            });
+
+            function updateToggleIcon(theme) {
+                const icon = toggleButton.querySelector('i');
+                icon.className = (theme === 'dark-mode') ? 'fas fa-sun' : 'fas fa-moon';
+            }
+        });
+    </script>
+</body>
+
+</html>

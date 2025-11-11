@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sagar Dulal - Professional Resume / CV</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Resume Page Specific Styling */
+    .resume-header {
+      text-align: center;
+      padding: 30px 0;
+      border-bottom: 2px solid var(--primary-color);
+      margin-bottom: 40px;
+    }
+
+    .download-cta {
+      padding: 15px 40px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-top: 25px;
+    }
+
+    .resume-content-grid {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      /* 1/4 for sidebar, 3/4 for experience */
+      gap: 40px;
+      text-align: left;
+    }
+
+    /* Sidebar: Skills & Education */
+    .resume-sidebar {
+      padding-right: 20px;
+      border-right: 1px solid var(--border-color);
+    }
+
+    .sidebar-section {
+      margin-bottom: 35px;
+    }
+
+    .sidebar-section h3 {
+      color: var(--accent-color);
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .skill-list {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .skill-list li {
+      font-size: 1rem;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    .skill-list li i {
+      color: var(--primary-color);
+      margin-right: 8px;
+    }
+
+    /* Main Content: Experience & Projects */
+    .experience-timeline {
+      padding-left: 20px;
+    }
+
+    .experience-item {
+      margin-bottom: 40px;
+      position: relative;
+      padding-left: 25px;
+      border-left: 2px solid var(--border-color);
+    }
+
+    .experience-item::before {
+      content: '';
+      position: absolute;
+      top: 5px;
+      left: -8px;
+      width: 16px;
+      height: 16px;
+      background-color: var(--primary-color);
+      border-radius: 50%;
+      border: 3px solid var(--background-color);
+      box-shadow: 0 0 10px var(--glow-color);
+    }
+
+    .experience-item h4 {
+      font-size: 1.5rem;
+      color: var(--primary-color);
+      margin-bottom: 5px;
+    }
+
+    .experience-item p {
+      font-style: italic;
+      opacity: 0.8;
+      margin-bottom: 10px;
+    }
+
+    .experience-item ul {
+      padding-left: 25px;
+      margin-top: 10px;
+    }
+
+    .experience-item ul li {
+      margin-bottom: 5px;
+      line-height: 1.4;
+      list-style-type: '⚡';
+      padding-left: 10px;
+    }
+
+    /* Responsiveness */
+    @media (max-width: 992px) {
+      .resume-content-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .resume-sidebar {
+        border-right: none;
+        padding-right: 0;
+      }
+
+      .experience-timeline {
+        padding-left: 0;
+        margin-top: 30px;
+      }
+
+      .experience-item {
+        border-left: none;
+        padding-left: 0;
+      }
+
+      .experience-item::before {
+        content: none;
+      }
+    }
+  </style>
+</head>
+
+<body class="dark-mode">
+  <header>
+    <nav>
+      <div class="logo">Sagar <span>Tech</span></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="resume.html">Resume</a></li>
+      </ul>
+      <button id="theme-toggle" aria-label="Toggle dark and light theme">
+        <i class="fas fa-sun"></i> </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="resume-section">
+      <div class="container">
+        <div class="resume-header">
+          <h2 class="section-heading">Professional Summary & CV</h2>
+          <p style="font-size: 1.2rem; margin-top: 15px; opacity: 0.8;">
+            Detailed work history, technical proficiencies, and educational background.
+          </p>
+          <a href="#" class="primary-cta download-cta">
+            <i class="fas fa-download"></i> Download Full Resume (PDF)
+          </a>
+        </div>
+
+        <div class="resume-content-grid">
+
+          <div class="resume-sidebar">
+
+            <div class="sidebar-section">
+              <h3>Code Stack</h3>
+              <ul class="skill-list">
+                <li><i class="fas fa-code"></i> <strong>HTML5, CSS3</strong> (Advanced)</li>
+                <li><i class="fas fa-code"></i> <strong>JavaScript</strong> (DOM Manipulation)</li>
+                <li><i class="fas fa-code"></i> Responsive Design (Media Queries)</li>
+                <li><i class="fas fa-code"></i> Git / GitHub</li>
+              </ul>
+            </div>
+
+            <div class="sidebar-section">
+              <h3>Creative & Media</h3>
+              <ul class="skill-list">
+                <li><i class="fas fa-paint-brush"></i> <strong>Adobe Photoshop</strong></li>
+                <li><i class="fas fa-palette"></i> <strong>Canva</strong> (Advanced Graphic Design)</li>
+                <li><i class="fas fa-video"></i> <strong>Filmora</strong> Video Editing</li>
+                <li><i class="fas fa-file-alt"></i> <strong>MS Office Suite</strong></li>
+              </ul>
+            </div>
+
+            <div class="sidebar-section">
+              <h3>Soft Skills</h3>
+              <ul class="skill-list">
+                <li><i class="fas fa-brain"></i> <strong>Adaptability</strong> & Problem Solving</li>
+                <li><i class="fas fa-comments"></i> Professional Communication</li>
+                <li><i class="fas fa-lightbulb"></i> Creativity & Innovation</li>
+              </ul>
+            </div>
+
+            <div class="sidebar-section">
+              <h3>Education</h3>
+
+              <p><strong>IT Training Certification</strong></p>
+              <p>DIT Solution (IT Solution Center)</p>
+              <p style="opacity: 0.7;">[2078 B.S.] - [Not Confirmed]</p>
+
+              <p style="margin-top: 15px;"><strong>+2 (Intermediate Level)</strong></p>
+              <p>Pushpalal Memorial College</p>
+              <p style="opacity: 0.7;">[2080 B.S.] - [2082 B.S.]</p>
+            </div>
+
+          </div>
+
+          <div class="experience-timeline">
+            <h3 class="section-heading" style="text-align: left; border-bottom: none;">Professional Experience (2+
+              Years)</h3>
+
+            <div class="experience-item">
+              <h4>Digital Media & Web Design Specialist</h4>
+              <p>Freelance/Contract Work | Kathmandu, Nepal | Jan 2024 - Present</p>
+              <ul>
+                <li>Executed <strong>full branding projects</strong> for 8+ clients, creating visual identities, custom
+                  logos, and style guides using Photoshop and Canva.</li>
+                <li>Developed and launched <strong>5 client landing pages</strong> using clean HTML/CSS/JS, focusing on
+                  modern aesthetics and mobile responsiveness.</li>
+                <li>Produced and edited <strong>15+ promotional video assets</strong> for social media campaigns using
+                  Filmora, resulting in increased client engagement.</li>
+                <li>Managed client communication and project timelines, maintaining high <strong>Client
+                    Satisfaction</strong> scores.</li>
+              </ul>
+            </div>
+
+            <div class="experience-item">
+              <h4>Junior Front-End Developer & Content Creator</h4>
+              <p>Tech Solutions Agency (Simulated) | Remote | Aug 2023 - Jan 2024</p>
+              <ul>
+                <li>Collaborated on a development team to implement <strong>complex CSS layouts</strong> and maintain
+                  codebase consistency across multiple projects.</li>
+                <li>Wrote and optimized <strong>JavaScript scripts</strong> to introduce interactive elements (e.g.,
+                  carousels, data filtering) on various company websites.</li>
+                <li>Designed professional <strong>MS Office templates</strong> (reports and presentations) used
+                  company-wide, standardizing communication materials.</li>
+                <li>Demonstrated high <strong>Adaptability</strong> by quickly mastering new tools and prioritizing
+                  tasks in a fast-paced environment.</li>
+              </ul>
+            </div>
+
+            <h3 class="section-heading" style="text-align: left; border-bottom: none; margin-top: 40px;">Key Projects
+              Summary</h3>
+
+            <div class="experience-item" style="border-left: none; padding-left: 0; margin-bottom: 0;">
+              <p style="font-style: normal; opacity: 1;">A curated selection of my most impactful work, demonstrating
+                the successful integration of development and design:</p>
+              <ul>
+                <li><strong>E-Commerce Micro-Site:</strong> Designed the complete UI/UX and coded the front-end
+                  (HTML/CSS/JS) for a product launch, achieving 100% mobile responsiveness.</li>
+                <li><strong>Corporate Rebranding Package:</strong> Led the visual overhaul of a client's identity,
+                  delivering high-resolution graphic assets, video intro/outro, and website mockups.</li>
+                <li><strong>Interactive Data Dashboard:</strong> Developed a vanilla JavaScript application to visualize
+                  client data, showcasing proficiency in DOM manipulation and data presentation.</li>
+              </ul>
+              <p style="margin-top: 20px;">For detailed descriptions, case studies, and live links, please visit the
+                full <a href="portfolio.html">Portfolio</a> page.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; <span id="current-year"></span> Sagar Dulal | Sagar Tech Portfolio | Code, Design, Deploy.
+  </footer>
+
+  <script>
+    // Theme toggle and current year script re-used from other pages
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggleButton = document.getElementById('theme-toggle');
+      const body = document.body;
+      const currentYearSpan = document.getElementById('current-year');
+
+      currentYearSpan.textContent = new Date().getFullYear();
+
+      // Theme persistence logic
+      const savedTheme = localStorage.getItem('theme') || 'dark-mode';
+      body.className = savedTheme;
+      updateToggleIcon(savedTheme);
+
+      toggleButton.addEventListener('click', () => {
+        const newTheme = body.classList.contains('light-mode') ? 'dark-mode' : 'light-mode';
+        body.className = newTheme;
+        localStorage.setItem('theme', newTheme);
+        updateToggleIcon(newTheme);
+      });
+
+      function updateToggleIcon(theme) {
+        const icon = toggleButton.querySelector('i');
+        icon.className = (theme === 'dark-mode') ? 'fas fa-sun' : 'fas fa-moon';
+      }
+    });
+  </script>
+</body>
+
+</html>
